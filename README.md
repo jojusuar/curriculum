@@ -1,2 +1,2 @@
-# curriculum
-Curriculum Vitae
+# Curriculum Vitae
+José Julio Suárez
