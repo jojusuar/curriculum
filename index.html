@@ -1,122 +1,205 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author" content="José Julio Suárez Valdivieso">
-        <meta name="keywords" content="Java, Python, C, CV, SQL, Backend, API">
-        <meta name="description" content="Curriculum Vitae de José Julio Suárez, undergrad en Computación.">
-        <title>José Julio Suárez -> CV</title>
-    </head>
-    <body>
-        <header>
-            <h1>José Julio Suárez</h1>
-            <p>Ciencias Computacionales | jojusuar@espol.edu.ec | +593991096645</p>
-        </header>
-        <nav>
-            <ol type="I">
-                <li><a href="#resumen">Resumen</a></li>
-                <li><a href="#experiencia">Experiencia</a></li>
-                <li><a href="#trayectoria-academica">Trayectoria académica</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#proyectos-notables">Proyectos notables</a></li>
-            </ol>
-        </nav>
-        <main>
-            <section id="resumen">
-                <h2>Resumen</h2>
-                    <p>Soy un undergrad de Ciencias Computacionales con muchísimas ganas de crecer y seguir <br>
-                        aprendiendo en el mundo digital. Creo firmemente en que la automatización por software <br>
-                        moldeará el futuro de todas las industrias, y me entusiasma compartir mi pasión con colegas.
-                    </p>
-            </section>
-            <section id="experiencia">
-                <h2>Experiencia</h2>
-                <ol type="I">
-                    <li>(2024-presente) Backend & API Developer, Terranet S.A.S.</li>
-                </ol>
-            </section>
-            <section id="trayectoria-academica">
-                <h2>Trayectoria académica</h2>
-                <ul>
-                    <li>(2022-presente) Estudiante de pregrado en Computer Science, Escuela Superior Politécnica del Litoral.</li>
-                    <li>(2021) Bachiller de la República del Ecuador, Unidad Educativa Particular Eugenio Espejo.</li>
-                </ul>
-            </section>
-            <section id="habilidades">
-                <h2>Habilidades</h2>
-                <ul>
-                    <li>
-                        <h3>Lenguajes de programación:</h3>
-                        <ul>
-                            <li>Java</li>
-                            <li>Python</li>
-                            <li>C</li>
-                            <li>Dart</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h3>Herramientas</h3>
-                        <ul>
-                            <li>FastApi</li>
-                            <li>Flutter</li>
-                            <li>Android Studio</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h3>Conocimientos</h3>
-                        <ul>
-                            <li>Diseño de Software</li>
-                            <li>Estructuras de Datos</li>
-                            <li>Programación de Sistemas</li>
-                            <li>Sistemas de Base de Datos</li>
-                            <li>Paradigmas de Programación</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h3>Redacción de documentos</h3>
-                        <ul>
-                            <li>LaTeX</li>
-                            <li>Typst</li>
-                        </ul>
-                    </li>
-                </ul>
-            </section>
-            <section id="proyectos-notables">
-                <h2>Proyectos notables</h2>
-                <ul>
-                    <li>
-                        <h3>
-                            <a href="https://jojusuar.github.io/Harmonify/index.html">
-                                Harmonify
-                            </a>
-                        </h3>
-                        <p>Motor y calculadora de armonía musical del lado del cliente, escrito en JavaScript y desplegado en GitHub Pages.</p>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="https://github.com/jojusuar/DartInterpreter">
-                                Dart Validator
-                            </a>
-                        </h3>
-                        <p>Validador léxico, sintáctico y semántico para código Dart, escrito en Python utilizando los módulos Lex y Yacc.</p>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="https://github.com/jojusuar/Blowfish_AES_encrypter">
-                                Blowfish and AES encrypter/decrypter
-                            </a>
-                        </h3>
-                        <p>Herramienta de línea de comando para cifrar y descifrar archivos que utilizan los algoritmos Blowfish y AES, escrita en C.</p>
-                    </li>
-                </ul>
-            </section>
-        </main>
-        <footer>
-            <p>© José Julio Suárez - 2024</p>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="José Julio Suárez Valdivieso">
+    <meta name="keywords" content="Java, Python, C, CV, SQL, Backend, API">
+    <meta name="description" content="Curriculum Vitae de José Julio Suárez, undergrad en Computación.">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <title>José Julio Suárez -> CV</title>
+</head>
+
+<body>
+    <header>
+        <h1>José Julio Suárez</h1>
+        <p>Ciencias Computacionales | jojusuar@espol.edu.ec | +593991096645</p>
+        <img src="https://placehold.co/400">
+    </header>
+    <nav>
+        <ol type="I">
+            <li><a href="#resumen">Resumen</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#trayectoria-academica">Trayectoria académica</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#proyectos-notables">Proyectos notables</a></li>
+            <li><a href="#videos-relacionados">Videos Relacionados</a></li>
+            <li><a href="#donde-me-ubico">Dónde me ubico</a></li>
+        </ol>
+    </nav>
+    <main>
+        <section id="resumen">
+            <h2>Resumen</h2>
+            <p>Soy un undergrad de Ciencias Computacionales con muchísimas ganas de crecer y seguir <br>
+                aprendiendo en el mundo digital. Creo firmemente en que la automatización por software <br>
+                moldeará el futuro de todas las industrias, y me entusiasma compartir mi pasión con colegas.
+            </p>
+        </section>
+        <section id="experiencia">
+            <h2>Experiencia</h2>
+            <table border="1 | 0">
+                <tr>
+                    <th>Período</th>
+                    <th>Cargo</th>
+                    <th>Empresa</th>
+                </tr>
+                <tr>
+                    <td>2024-presente</td>
+                    <td>Backend & API Developer</td>
+                    <td>Terranet S.A.S.</td>
+                </tr>
+            </table>
+        </section>
+        <section id="trayectoria-academica">
+            <h2>Trayectoria académica</h2>
             <ul>
-                <li><a href="https://www.linkedin.com/in/josé-julio-suárez-b31a1a239">LinkedIn</a></li>
-                <li><a href="https://github.com/jojusuar/">GitHub</a></li>
+                <li>(2022-presente) Estudiante de pregrado en Computer Science, Escuela Superior Politécnica del
+                    Litoral.</li>
+                <li>(2021) Bachiller de la República del Ecuador, Unidad Educativa Particular Eugenio Espejo.</li>
             </ul>
-        </footer>
-    </body>
+        </section>
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>
+                    <h3>Lenguajes de programación:</h3>
+                    <ul>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>C</li>
+                        <li>Dart</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Herramientas</h3>
+                    <ul>
+                        <li>FastApi</li>
+                        <li>Flutter</li>
+                        <li>Android Studio</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Conocimientos</h3>
+                    <ul>
+                        <li>Diseño de Software</li>
+                        <li>Estructuras de Datos</li>
+                        <li>Programación de Sistemas</li>
+                        <li>Sistemas de Base de Datos</li>
+                        <li>Paradigmas de Programación</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Redacción de documentos</h3>
+                    <ul>
+                        <li>LaTeX</li>
+                        <li>Typst</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section id="proyectos-notables">
+            <h2>Proyectos notables</h2>
+            <ul>
+                <li>
+                    <h3>
+                        <a href="https://jojusuar.github.io/Harmonify/index.html">
+                            Harmonify
+                        </a>
+                    </h3>
+                    <p>Motor y calculadora de armonía musical del lado del cliente, escrito en JavaScript y desplegado
+                        en GitHub Pages.</p>
+                </li>
+                <li>
+                    <h3>
+                        <a href="https://github.com/jojusuar/DartInterpreter">
+                            Dart Validator
+                        </a>
+                    </h3>
+                    <p>Validador léxico, sintáctico y semántico para código Dart, escrito en Python utilizando los
+                        módulos Lex y Yacc.</p>
+                </li>
+                <li>
+                    <h3>
+                        <a href="https://github.com/jojusuar/Blowfish_AES_encrypter">
+                            Blowfish and AES encrypter/decrypter
+                        </a>
+                    </h3>
+                    <p>Herramienta de línea de comando para cifrar y descifrar archivos que utilizan los algoritmos
+                        Blowfish y AES, escrita en C.</p>
+                </li>
+            </ul>
+        </section>
+        <section id="videos-relacionados">
+            <h2>Videos relacionados</h2>
+            <iframe height="360" width="640" src="https://www.youtube.com/watch?v=3raT3XRVs9E">
+                Mi interpretación en guitarra de The Way Up.
+            </iframe>
+        </section>
+        <section id="donde-me-ubico">
+            <h2>Dónde me ubico</h2>
+            <div id="map" class="map">
+                <style>
+                    .map {
+                        height: 480px;
+                        width: 640px;
+                    }
+                </style>
+                <script>
+                    var x = -2.13429
+                    var y = -79.88726
+                    var map = L.map('map').setView([x, y], 12);
+                    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        maxZoom: 19,
+                        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                    }).addTo(map);
+                    var circle = L.circle([x, y], {
+                        color: 'red',
+                        fillColor: '#f03',
+                        fillOpacity: 0.5,
+                        radius: 5000
+                    }).addTo(map);
+                </script>
+            </div>
+        </section>
+        <section id="feedback">
+            <h2>Dame tu opinión</h2>
+            <form>
+                <label for="company">A qué compañía perteneces?</label>
+                <input type="text" name="company">
+                <br>
+                <label for="rating">Cuál es la impresión que te llevas de mi currículum?</label>
+                <select id="rating" name="rating">
+                    <option value="BUENA">Buena</option>
+                    <option value="INDIFERENTE">Indiferente</option>
+                    <option value="MALA">Mala</option>
+                </select>
+                <br>
+                <label for="recommendation">Recomendarías este currículum?</label>
+                <input type="radio" id="YES-radio" name="recommendation" value="YES">
+                <label for="YES-radio">Sí</label>
+                <input type="radio" id="NO-radio" name="recommendation" value="cherry">
+                <label for="NO-radio">No</label>
+                <br>
+                <label for="feedback">Escribe una pequeña reseña:</label>
+                <br>
+                <textarea id="feedback" name="feedback" placeholder="Escribe texto aquí..." cols="100"
+                    rows="10"></textarea>
+                <br>
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpiar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© José Julio Suárez - 2024</p>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/josé-julio-suárez-b31a1a239">LinkedIn</a></li>
+            <li><a href="https://github.com/jojusuar/">GitHub</a></li>
+        </ul>
+    </footer>
+</body>
+
 </html>
