@@ -1,0 +1,130 @@
+:root {
+    --color1: #301d3c;
+    --color2: #c3c291;
+}
+
+* {
+    font-family: "Poppins", "PT Sans", sans-serif;
+    font-weight: 200;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+li {
+    list-style: none;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10%;
+
+}
+
+#photo {
+    width: 200px;
+    height: auto;
+}
+
+.subtitle {
+    color: rgb(107 114 128 / 0.89);
+    text-transform: uppercase;
+}
+
+section {
+    /* margen (espacio externo) superior, derecho, abajo e izquierda */
+    margin: 4px 2px 8px 2px;
+
+    /* borde de grosor 0.2 en puntos, estilo sólido y color hexadecimal #cedddd  */
+    border: 0.2pt solid #cedddd;
+
+    /* relleno (espacio interno) de 
+    1.5% en la parte superior e inferior y 
+    0.8% a los lados derecho e izquierdo. */
+
+    padding: 1.5% 0.8%;
+
+    /* reemplazan el 0.8% inicial en el relleno izquierdo y derecho, 
+    dándoles un valor específico de 1.2% para esos lados. */
+
+    padding-left: 1.2%;
+    padding-right: 1.2%;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 10px;
+
+    /* sombra a un elemento */
+
+    -webkit-box-shadow: 3px 3px 1px 0px rgba(235, 234, 234, 0.60);
+    -moz-box-shadow: 3px 3px 1px 0px rgba(235, 234, 234, 0.60);
+    box-shadow: 3px 3px 1px 0px rgba(235, 234, 234, 0.60);
+}
+
+nav ol {
+    /* Modelo de diseño flexible */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+section form {
+    /* Modelo de diseño en cuadrícula */
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#feedback form>div{
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0% 0% 5%;
+    max-width: 90%;
+}
+#feedback form div+div{
+    grid-column: 2;
+}
+
+#radio-feedback{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0% 30%;
+}
+
+#feedback form button{
+    max-width: 30%;
+}
+
+#resumen {
+    display: grid;
+    justify-content: space-around;
+    align-items: stretch;
+    grid-template-areas: "A D" "B D";
+}
+
+#resumen h2 {
+    grid-area: A;
+}
+
+#resumen p {
+    max-width: 70%;
+    grid-area: B;
+}
+
+#resumen img {
+    grid-area: D;
+}
