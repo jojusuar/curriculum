@@ -14,11 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oxygen:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="stylesheets/style.css" />
 </head>
@@ -46,11 +42,11 @@
                 aprendiendo en el mundo digital. Creo firmemente en que la automatización por software
                 moldeará el futuro de todas las industrias, y me entusiasma compartir mi pasión con colegas.
             </p>
-            <img id="photo" src="https://placehold.co/400" alt="photo">
+            <img id="photo" src="assets/profile.jpeg" alt="photo">
         </section>
         <section id="experiencia">
             <h2 class="subtitle">Experiencia</h2>
-            <table border="1 | 0">
+            <table>
                 <tr>
                     <th>Período</th>
                     <th>Cargo</th>
@@ -75,7 +71,7 @@
             <h2 class="subtitle">Habilidades</h2>
             <ul>
                 <li>
-                    <h3>Lenguajes de programación:</h3>
+                    <h3>Lenguajes de programación</h3>
                     <ul>
                         <li>Java</li>
                         <li>Python</li>
@@ -84,7 +80,7 @@
                     </ul>
                 </li>
                 <li>
-                    <h3>Herramientas</h3>
+                    <h3>Frameworks</h3>
                     <ul>
                         <li>FastApi</li>
                         <li>Flutter</li>
@@ -142,44 +138,42 @@
                 </li>
             </ul>
         </section>
-        <section id="videos-relacionados">
-            <h2 class="subtitle">Videos relacionados</h2>
-            <iframe height="360" width="640" src="https://www.youtube.com/watch?v=3raT3XRVs9E">
-                Mi interpretación en guitarra de The Way Up.
-            </iframe>
-        </section>
-        <section id="donde-me-ubico">
-            <h2 class="subtitle">Dónde me ubico</h2>
-            <div id="map" class="map">
-                <style>
-                    .map {
-                        height: 480px;
-                        width: 640px;
-                    }
-                </style>
-                <script>
-                    var x = -2.13429
-                    var y = -79.88726
-                    var map = L.map('map').setView([x, y], 12);
-                    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                        maxZoom: 19,
-                        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-                    }).addTo(map);
-                    var circle = L.circle([x, y], {
-                        color: 'red',
-                        fillColor: '#f03',
-                        fillOpacity: 0.5,
-                        radius: 5000
-                    }).addTo(map);
-                </script>
-            </div>
-        </section>
+        <div id="video-y-mapa">
+            <section id="videos-relacionados">
+                <h2 class="subtitle">Videos relacionados</h2>
+                <iframe width="640" height="360" src="https://www.youtube.com/embed/3raT3XRVs9E?si=CqBhxtCznusChJVn"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </section>
+            <section id="donde-me-ubico">
+                <h2 class="subtitle">Dónde me ubico</h2>
+                <div id="map" class="map">
+                    <script>
+                        var x = -2.13429
+                        var y = -79.88726
+                        var map = L.map('map').setView([x, y], 12);
+                        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+                            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+                            maxZoom: 19
+                        }).addTo(map);
+                        var circle = L.circle([x, y], {
+                            color: 'red',
+                            fillColor: '#f03',
+                            fillOpacity: 0.05,
+                            radius: 5000
+                        }).addTo(map);
+                    </script>
+                </div>
+            </section>
+        </div>
         <section id="feedback">
             <h2 class="subtitle">Dame tu opinión</h2>
             <form>
                 <div>
                     <label for="company">A qué compañía perteneces?</label>
-                    <input type="text" name="company">
+                    <input type="text" name="company" placeholder="Escribe aquí...">
                     <label for="rating">Cuál es la impresión que te llevas de mi currículum?</label>
                     <select id="rating" name="rating">
                         <option value="BUENA">Buena</option>
